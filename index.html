@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muscle Index System — Poster</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:linear-gradient(160deg,#0d0d1a,#0f3460);min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:16px 10px 32px;}
+.poster{width:100%;max-width:440px;display:flex;flex-direction:column;gap:12px;}
+
+.hero{background:linear-gradient(135deg,#0f3460 0%,#534AB7 100%);border-radius:16px;padding:28px 22px 22px;text-align:center;}
+.hero-icon{font-size:42px;margin-bottom:10px;}
+.hero h1{color:#fff;font-size:22px;font-weight:700;line-height:1.2;margin-bottom:6px;}
+.hero .tagline{color:#C9B8F0;font-size:13px;line-height:1.5;margin-bottom:16px;}
+.hero-pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;}
+.hp{background:rgba(255,255,255,0.15);color:#fff;border-radius:20px;padding:5px 13px;font-size:13px;font-weight:600;}
+
+.section{background:#fff;border-radius:14px;padding:18px 18px 14px;}
+.sec-head{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+.sec-head .ic{font-size:18px;}
+.sec-head h2{font-size:14px;font-weight:700;color:#1a1a2e;}
+
+.cmp{width:100%;border-collapse:collapse;font-size:11.5px;}
+.cmp th{padding:7px 8px;text-align:left;font-size:10px;font-weight:600;color:#fff;}
+.cmp td{padding:6px 8px;border-bottom:1px solid #F0F0F0;color:#444;vertical-align:top;line-height:1.4;}
+.cmp tr:last-child td{border-bottom:none;}
+.th-old{background:#B8460B;}
+.th-new{background:#2E6B0E;}
+.lbl{font-size:10px;font-weight:600;color:#888;width:22%;}
+.badge{display:inline-block;border-radius:4px;padding:1px 6px;font-size:9.5px;font-weight:600;}
+.badge.red{background:#FCEBEB;color:#A32D2D;}
+.badge.grn{background:#EAF3DE;color:#2E6B0E;}
+
+.phases{display:flex;flex-direction:column;gap:8px;}
+.phase{border-radius:10px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;}
+.phase.p1{background:#E6F1FB;border-left:4px solid #185FA5;}
+.phase.p2{background:#F5F3FF;border-left:4px solid #534AB7;}
+.phase.p3{background:#EAF3DE;border-left:4px solid #2E6B0E;}
+.phase-num{font-size:10px;font-weight:700;border-radius:20px;padding:2px 8px;white-space:nowrap;margin-top:1px;}
+.phase.p1 .phase-num{background:#185FA5;color:#fff;}
+.phase.p2 .phase-num{background:#534AB7;color:#fff;}
+.phase.p3 .phase-num{background:#2E6B0E;color:#fff;}
+.phase-body h3{font-size:12px;font-weight:700;color:#1a1a2e;margin-bottom:3px;}
+.phase-body p{font-size:11px;color:#555;line-height:1.5;}
+
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.met{border-radius:10px;padding:12px 10px;text-align:center;}
+.met.blu{background:#E6F1FB;}
+.met.pur{background:#F5F3FF;}
+.met.grn{background:#EAF3DE;}
+.met.org{background:#FFF3E0;}
+.met .mv{font-size:20px;font-weight:700;display:block;margin-bottom:3px;}
+.met.blu .mv{color:#185FA5;}
+.met.pur .mv{color:#534AB7;}
+.met.grn .mv{color:#2E6B0E;}
+.met.org .mv{color:#E65100;}
+.met .ml{font-size:10px;color:#666;line-height:1.3;}
+
+.why-row{display:flex;gap:8px;margin-top:6px;}
+.why-chip{flex:1;background:#F5F5F5;border-radius:8px;padding:8px 6px;text-align:center;font-size:10px;color:#333;line-height:1.4;}
+.why-chip .wic{font-size:16px;display:block;margin-bottom:3px;}
+
+.strip{border-radius:10px;overflow:hidden;margin-top:4px;}
+.strip-row{display:flex;align-items:center;padding:7px 10px;gap:8px;border-bottom:1px solid rgba(0,0,0,0.05);}
+.strip-row:last-child{border-bottom:none;}
+.strip.inc .strip-row{background:#EAF3DE;}
+.strip.tax .strip-row{background:#FCEBEB;}
+.strip-row .pct{font-size:10px;font-weight:700;width:100px;flex-shrink:0;color:#1a1a2e;}
+.strip-row .val{font-size:10.5px;color:#444;}
+.strip-head{padding:6px 10px;font-size:10px;font-weight:700;color:#fff;letter-spacing:0.4px;}
+.strip.inc .strip-head{background:#2E6B0E;}
+.strip.tax .strip-head{background:#A32D2D;}
+
+.closing{background:linear-gradient(135deg,#0f3460,#534AB7);border-radius:14px;padding:22px 20px;text-align:center;}
+.closing p{color:#fff;font-size:13px;font-weight:500;line-height:1.7;}
+.closing strong{color:#C9B8F0;}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-icon">💪</div>
+    <h1>Muscle Index Dividend &amp; Tax</h1>
+    <div class="tagline">Effort-based equity system — where self-discipline determines your dividend, not your bloodline or your bank balance.</div>
+    <div class="hero-pills">
+      <span class="hp">3-Phase Rollout</span>
+      <span class="hp">Budget Surplus</span>
+    </div>
+    <a href="ppt.html" style="
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+">Go to Detailed proposal deck
+    </a>
+  </div>
+
+  <!-- PROBLEM -->
+  <div class="section">
+    <div class="sec-head"><span class="ic">⚠️</span><h2>The Problem with current Health Programmes</h2></div>
+    <table class="cmp">
+      <tr>
+        <th class="lbl" style="background:#eee;color:#888;"></th>
+        <th class="th-old" style="width:39%;">Current System</th>
+        <th class="th-new" style="width:39%;">Muscle Index</th>
+      </tr>
+      <tr>
+        <td class="lbl">Participation</td>
+        <td><span class="badge red">15–20%, most are already healthy</span></td>
+        <td><span class="badge grn">Est. 75%+ </span></td>
+      </tr>
+      <tr>
+        <td class="lbl">Psychology</td>
+        <td>"It's free, I'll go if I have time."</td>
+        <td>"I lose thousands if I don't train."</td>
+      </tr>
+      <tr>
+        <td class="lbl">Health levers</td>
+        <td>Exercise only — 20% of health</td>
+        <td>Diet + Training + Sleep — 100%</td>
+      </tr>
+      <tr>
+        <td class="lbl">Cost model</td>
+        <td>Govt spending — grows annually</td>
+        <td>Self-funded surplus system</td>
+      </tr>
+    </table>
+    <div style="background:#FFF3EE;border-radius:8px;padding:9px 11px;margin-top:10px;font-size:11px;color:#B8460B;line-height:1.5;">
+      <strong>Loss aversion:</strong> People feel losing money ~2× more strongly than gaining the same amount. Tax multipliers for poor health drive action that free classes never will.
+    </div>
+  </div>
+
+  <!-- WHY SMMI -->
+  <div class="section">
+    <div class="sec-head"><span class="ic">🔬</span><h2>Why Skeletal Muscle Mass Index?</h2></div>
+    <div style="font-size:11.5px;color:#555;margin-bottom:10px;line-height:1.5;">SMMI = Skeletal Muscle Mass (kg) ÷ Height² (m²). The only health asset that cannot be inherited, bought, or surgically implanted.</div>
+    <div class="why-row">
+      <div class="why-chip"><span class="wic">🚫</span>Cannot be inherited</div>
+      <div class="why-chip"><span class="wic">💊</span>Cannot be surgically added</div>
+      <div class="why-chip"><span class="wic">⏳</span>Degrades without effort</div>
+      <div class="why-chip"><span class="wic">🧬</span>Predicts longevity</div>
+    </div>
+    <div style="background:#FCEBEB;border-radius:8px;padding:8px 11px;margin-top:10px;font-size:11px;color:#A32D2D;line-height:1.5;">
+      ❌ Not VO₂ max — formula biased toward runners, not directly measured<br>
+      ❌ Fat % used as upper limit only — no lower bound; athletes naturally fall below
+    </div>
+  </div>
+
+  <!-- 3 PHASES -->
+  <div class="section">
+    <div class="sec-head"><span class="ic">📅</span><h2>3-Phase Implementation</h2></div>
+    <div class="phases">
+      <div class="phase p1">
+        <span class="phase-num">Year 1</span>
+        <div class="phase-body">
+          <h3>Free National Body Composition Scan</h3>
+          <p>Every resident scanned within their birth month at 900 BIA machines across RC/RN/NC. $100 CDC voucher for those within healthy SMMI &amp; fat limit (≤18% M, ≤28% F).</p>
+        </div>
+      </div>
+      <div class="phase p2">
+        <span class="phase-num">Year 2+</span>
+        <div class="phase-body">
+          <h3>SMMI Dividend &amp; Tax System Live</h3>
+          <p>Annual muscle dividend up to $2,000 (cash + Medisave). Tax multipliers ×1.1 to ×1.5 for those below healthy thresholds. Protein supply doubled at hawkers below $1 each.</p>
+        </div>
+      </div>
+      <div class="phase p3">
+        <span class="phase-num">Year 5+</span>
+        <div class="phase-body">
+          <h3>AGI Abundance Era — Health as the New Wealth</h3>
+          <p>As AGI and robotics drive material costs toward zero, money inflates toward zero value. SMMI becomes the primary equity metric — the fairest system, based purely on personal effort.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section">
+    <div class="sec-head"><span class="ic">💰</span><h2>How It Works — Year 2+</h2></div>
+    <div class="strip inc">
+      <div class="strip-head">✅ DIVIDEND — fat ≤ limit AND SMMI ≥ 50th percentile</div>
+      <div class="strip-row"><span class="pct">Top 10% SMMI</span><span class="val">$1,000 cash + $1,000 Medisave / yr</span></div>
+      <div class="strip-row"><span class="pct">75th–90th %ile</span><span class="val">$500 cash + $500 Medisave / yr</span></div>
+      <div class="strip-row"><span class="pct">50th–75th %ile</span><span class="val">$200 cash + $200 Medisave / yr</span></div>
+      <div class="strip-row"><span class="pct">Improvement†</span><span class="val">$500 cash + $100 Medisave one-off</span></div>
+    </div>
+    <div style="font-size:9.5px;color:#888;padding:3px 2px;margin-bottom:8px;">†Above fat limit only — ≥5% fat reduction of body weight AND &lt;⅕ muscle lost on next scan</div>
+    <div class="strip tax">
+      <div class="strip-head">📈 TAX MULTIPLIER — income, property, corporate &amp; MediShield Life</div>
+      <div class="strip-row"><span class="pct">Fat &gt;limit OR SMMI 50–75th</span><span class="val">Original rate × 1.1</span></div>
+      <div class="strip-row"><span class="pct">SMMI 11th–25th %ile</span><span class="val">Original rate × 1.2</span></div>
+      <div class="strip-row"><span class="pct">Bottom 10% SMMI</span><span class="val">Original rate × 1.5</span></div>
+    </div>
+  </div>
+
+  <!-- METRICS -->
+  <div class="section">
+    <div class="sec-head"><span class="ic">📊</span><h2>Estimated Annual Impact — Year 2</h2></div>
+    <div class="metrics">
+      <div class="met blu"><span class="mv">~1.02M</span><span class="ml">Residents qualify for dividend</span></div>
+      <div class="met grn"><span class="mv">+$3.1B</span><span class="ml">Estimated annual surplus</span></div>
+      <div class="met pur"><span class="mv">~1.68M</span><span class="ml">In ×1.1 tax band</span></div>
+      <div class="met org"><span class="mv">$1.8B</span><span class="ml">Healthcare cost savings</span></div>
+    </div>
+    <div style="background:#EAF3DE;border-radius:8px;padding:9px 11px;margin-top:10px;font-size:11px;color:#2E6B0E;line-height:1.5;">
+      <strong>Self-funding:</strong> As the population gets healthier, healthcare savings grow faster than dividend costs — the surplus increases even as the tax base shrinks.
+    </div>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <p>As AGI drive the cost of goods toward zero, <strong>money itself will inflate toward zero value.</strong><br><br>
+    In that world, muscle mass is the <strong>fairest possible measure of wealth</strong> — it cannot be printed, inherited, or transferred. It grows only through <strong>sustained personal effort</strong>, and degrades the moment you stop.<br><br>
+    <strong>Only self-discipline deserves to be rich.</strong></p>
+        <a href="ppt.html" style="
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+">Go to Detailed proposal deck
+    </a>
+  </div>
+
+</div>
+</body>
+</html>
