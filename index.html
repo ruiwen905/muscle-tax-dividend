@@ -119,6 +119,111 @@ strong{color:#1a1a2e;font-weight:600;}
 .nb:disabled{opacity:0.25;cursor:not-allowed;}
 .nav-mid{font-size:10.5px;color:var(--sub);text-align:center;flex:1;line-height:1.3;}
 .sci{font-size:10px;color:#AAA;font-style:italic;margin-top:4px;line-height:1.4;}
+/* chart canvas wrapper — height controlled here so media queries work */
+.chart-canvas-wrap{position:relative;width:100%;height:175px;}
+
+/* ── RESPONSIVE: iPad (≥600px) ─────────────────────── */
+@media (min-width:600px){
+  body{padding:20px 16px 40px;}
+  .deck{max-width:600px;}
+  .hdr{padding:13px 20px;}
+  .hdr-title{font-size:12px;}
+  .hdr-phase,.hdr-num{font-size:13px;}
+  .tabs .tab{font-size:11px;padding:9px 13px;}
+  .slide{padding:18px 20px 76px;min-height:500px;}
+  .pbanner{padding:11px 15px;margin-bottom:14px;}
+  .pbanner-icon{font-size:26px;}
+  .pbanner h2{font-size:16px;}
+  .pt{font-size:11px;}
+  h1{font-size:20px;}
+  h3{font-size:14px;}
+  p,li{font-size:13px;}
+  .card{padding:12px 15px;margin-bottom:9px;}
+  .hl{padding:12px 15px;}
+  .ttable th{font-size:11px;padding:8px 8px;}
+  .ttable td{font-size:11.5px;padding:7px 8px;}
+  .ttable td span.sub-formula{font-size:9.5px;}
+  .tbl-label{font-size:13px;}
+  .fml{font-size:15px;}
+  .ex{font-size:13px;}
+  .chart-title{font-size:13px;}
+  .ctbtn{font-size:12px;padding:5px 16px;}
+  .legitem{font-size:11px;}
+  .chart-canvas-wrap{height:210px;}
+  .fbody strong{font-size:13px;}
+  .fbody p{font-size:12px;}
+  .fnum{width:30px;height:30px;font-size:13px;}
+  .stat .sv{font-size:22px;}
+  .stat .sl{font-size:11px;}
+  .sur-box .sv{font-size:26px;}
+  .quote.p3 p{font-size:13px;}
+  .xchip{font-size:13px;}
+  .nb{padding:9px 22px;font-size:14px;}
+  .nav-mid{font-size:12px;}
+  .nav{padding:11px 18px;}
+  .badge{font-size:10.5px;}
+  .sci{font-size:11px;}
+  .pie-cell .pie-lbl{font-size:10px;}
+}
+
+/* ── RESPONSIVE: Desktop (≥1024px) ────────────────── */
+@media (min-width:1024px){
+  body{padding:30px 24px 50px;}
+  .deck{max-width:900px;border-radius:22px;}
+  .hdr{padding:15px 26px;}
+  .hdr-title{font-size:13px;letter-spacing:1px;}
+  .hdr-phase{font-size:13px;margin-top:3px;}
+  .hdr-num{font-size:14px;}
+  .prog{height:5px;}
+  .tabs .tab{font-size:12px;padding:11px 18px;}
+  .slide{padding:24px 28px 88px;min-height:580px;}
+  .pbanner{padding:14px 18px;margin-bottom:16px;border-radius:12px;gap:13px;}
+  .pbanner-icon{font-size:32px;}
+  .pbanner h2{font-size:20px;}
+  .pt{font-size:11.5px;letter-spacing:0.7px;}
+  h1{font-size:24px;margin-bottom:6px;}
+  h3{font-size:15px;margin:12px 0 6px;}
+  p,li{font-size:13.5px;line-height:1.65;}
+  li{margin-bottom:4px;}
+  ul{margin-left:18px;}
+  .card{padding:14px 18px;margin-bottom:10px;border-radius:12px;}
+  .hl{padding:13px 18px;border-radius:12px;}
+  .xchip{font-size:13.5px;padding:9px 14px;border-radius:10px;}
+  .ttable th{font-size:12px;padding:10px 11px;}
+  .ttable td{font-size:12px;padding:9px 11px;}
+  .ttable td span.sub-formula{font-size:10px;margin-top:3px;}
+  .tbl-label{font-size:13.5px;margin:12px 0 5px;}
+  .formula-box{padding:14px 20px;border-radius:12px;}
+  .fml{font-size:17px;}
+  .ex{font-size:13.5px;margin-top:5px;}
+  .chart-wrap{padding:14px 12px 10px;border-radius:12px;}
+  .chart-title{font-size:14px;margin-bottom:8px;}
+  .ctbtn{font-size:13px;padding:6px 20px;}
+  .legitem{font-size:12px;}
+  .chart-canvas-wrap{height:270px;}
+  .fbody{padding:11px 14px;}
+  .fbody strong{font-size:14px;}
+  .fbody p{font-size:12.5px;}
+  .fnum{width:34px;height:34px;font-size:14px;}
+  .fstep{gap:12px;}
+  .fstep:not(:last-child)::before{left:17px;top:32px;}
+  .stat .sv{font-size:26px;}
+  .stat .sl{font-size:12px;}
+  .stat{padding:13px 10px;}
+  .sur-box{padding:14px 18px;}
+  .sur-box .sv{font-size:30px;}
+  .sur-box .sl{font-size:13px;}
+  .quote{padding:14px 18px;}
+  .quote.p3 p{font-size:14px;}
+  .badge{font-size:11px;padding:2px 8px;}
+  .nb{padding:11px 30px;font-size:15px;}
+  .nav-mid{font-size:13px;}
+  .nav{padding:13px 22px;}
+  .sci{font-size:11.5px;}
+  .pie-cell .pie-lbl{font-size:10.5px;}
+  /* pie canvases slightly larger */
+  .pie-cell canvas{width:80px!important;height:80px!important;}
+}
 </style>
 </head>
 <body>
@@ -139,7 +244,7 @@ strong{color:#1a1a2e;font-weight:600;}
     <div class="tab ap3"  id="t-p3"  onclick="jump(9)">Phase 3</div>
   </div>
 
-  <!-- ══ SLIDE 0: WHY CHANGE ══ -->
+  <!-- SLIDE 0: WHY CHANGE -->
   <div class="slide on" data-ph="mot">
     <div class="pbanner mot"><div class="pbanner-icon">💡</div><div><div class="pt">The Case for Change</div><h2>Why the Current Approach Falls Short</h2></div></div>
     <div class="card mot">
@@ -189,7 +294,7 @@ strong{color:#1a1a2e;font-weight:600;}
     <div class="hl mot" style="margin-top:10px;"><p><strong>Loss aversion:</strong> People feel losing money ~2× more strongly than gaining the same amount. A tax multiplier for poor health is a far stronger motivator than a free class with no consequence.</p></div>
   </div>
 
-  <!-- ══ SLIDE 1: MISSION ══ -->
+  <!-- SLIDE 1: MISSION -->
   <div class="slide" data-ph="mv">
     <h1>Muscle Index Dividend &amp; Tax</h1>
     <div class="card p2">
@@ -217,7 +322,7 @@ strong{color:#1a1a2e;font-weight:600;}
     <div class="xchip">❌ Not fat % alone — used as a limit filter only; athletes naturally fall below normal ranges</div>
   </div>
 
-  <!-- ══ SLIDE 2: PHASE 1 LOGISTICS ══ -->
+  <!-- SLIDE 2: PHASE 1 LOGISTICS -->
   <div class="slide" data-ph="p1">
     <div class="pbanner p1"><div class="pbanner-icon">🏥</div><div><div class="pt">Phase 1 · This Year</div><h2>Free National Body Composition Scan</h2></div></div>
     <div class="hl p1"><p>Every resident completes a <strong>free fasted scan within their birth month</strong> — staggered rollout, ~283,000 people/month over 12 months.</p></div>
@@ -247,7 +352,7 @@ strong{color:#1a1a2e;font-weight:600;}
     </div>
   </div>
 
-  <!-- ══ SLIDE 3: PHASE 1 BALANCE SHEET ══ -->
+  <!-- SLIDE 3: PHASE 1 BALANCE SHEET -->
   <div class="slide" data-ph="p1">
     <div class="pbanner p1"><div class="pbanner-icon">💵</div><div><div class="pt">Phase 1 · Cost &amp; Balance Sheet</div><h2>Year 1 Estimated Financials</h2></div></div>
     <table class="ttable">
@@ -268,7 +373,7 @@ strong{color:#1a1a2e;font-weight:600;}
     </table>
   </div>
 
-  <!-- ══ SLIDE 4: PRE-PHASE 2 ══ -->
+  <!-- SLIDE 4: PRE-PHASE 2 -->
   <div class="slide" data-ph="pre">
     <div class="pbanner pre"><div class="pbanner-icon">⚙️</div><div><div class="pt">Pre-Phase 2 · Preparation</div><h2>Protein Supply &amp; Equipment Readiness</h2></div></div>
     <div class="card pre">
@@ -302,7 +407,7 @@ strong{color:#1a1a2e;font-weight:600;}
     </div>
   </div>
 
-  <!-- ══ SLIDE 5: PHASE 2 POPULATION ══ -->
+  <!-- SLIDE 5: PHASE 2 POPULATION -->
   <div class="slide" data-ph="p2">
     <div class="pbanner p2"><div class="pbanner-icon">👥</div><div><div class="pt">Phase 2 · Population Estimates</div><h2>Who Qualifies — Headcount Basis</h2></div></div>
     <div class="card p2">
@@ -335,7 +440,7 @@ strong{color:#1a1a2e;font-weight:600;}
     </table>
   </div>
 
-  <!-- ══ SLIDE 6: PHASE 2 SMMI CHART ══ -->
+  <!-- SLIDE 6: PHASE 2 SMMI CHART -->
   <div class="slide" data-ph="p2">
     <div class="pbanner p2"><div class="pbanner-icon">📊</div><div><div class="pt">Phase 2 · Year 2 Onwards</div><h2>SMMI &amp; Body Fat % Reference Charts</h2></div></div>
     <div class="formula-box">
@@ -348,7 +453,7 @@ strong{color:#1a1a2e;font-weight:600;}
         <button class="ctbtn on" id="sm-m" onclick="showSMMI('male')">Male</button>
         <button class="ctbtn" id="sm-f" onclick="showSMMI('female')">Female</button>
       </div>
-      <div style="position:relative;width:100%;height:175px;"><canvas id="smmiC"></canvas></div>
+      <div class="chart-canvas-wrap"><canvas id="smmiC"></canvas></div>
       <div class="legwrap" id="smmiLeg"></div>
       <p class="sci" style="text-align:center;margin-top:3px;">🔴 Red dot = 26 kg muscle, 1.65 m → SMMI 9.55 kg/m²</p>
     </div>
@@ -358,13 +463,13 @@ strong{color:#1a1a2e;font-weight:600;}
         <button class="ctbtn on" id="fat-m" onclick="showFat('male')">Male</button>
         <button class="ctbtn" id="fat-f" onclick="showFat('female')">Female</button>
       </div>
-      <div style="position:relative;width:100%;height:175px;"><canvas id="fatC"></canvas></div>
+      <div class="chart-canvas-wrap"><canvas id="fatC"></canvas></div>
       <div class="legwrap" id="fatLeg"></div>
       <p class="sci" style="text-align:center;margin-top:3px;">Dashed line = fat % limit (M ≤18%, F ≤28%)</p>
     </div>
   </div>
 
-  <!-- ══ SLIDE 7: INCENTIVE & TAX TABLES ══ -->
+  <!-- SLIDE 7: INCENTIVE & TAX TABLES -->
   <div class="slide" data-ph="p2">
     <div class="pbanner p2"><div class="pbanner-icon">💰</div><div><div class="pt">Phase 2 · Year 2 Onwards</div><h2>Incentives &amp; Tax Multipliers</h2></div></div>
     <div class="tbl-label">✅ Incentive Table — Annual Muscle Dividend</div>
@@ -408,7 +513,7 @@ strong{color:#1a1a2e;font-weight:600;}
     </div>
   </div>
 
-  <!-- ══ SLIDE 8: BALANCE SHEET BASELINE ══ -->
+  <!-- SLIDE 8: BALANCE SHEET BASELINE -->
   <div class="slide" data-ph="p2">
     <div class="pbanner p2"><div class="pbanner-icon">📈</div><div><div class="pt">Phase 2 · Annual Balance Sheet</div><h2>Year 2 Baseline — Median at 50th %ile</h2></div></div>
     <p class="sci" style="margin-bottom:6px;">~3.39M adult residents. ~1,015,000 below fat limit. ~2,375,000 above fat limit. ×1.1 band: ~1,678,500 people.</p>
@@ -434,7 +539,7 @@ strong{color:#1a1a2e;font-weight:600;}
     <div class="sur-box grn"><div class="sv">+$3,075M / yr</div><div class="sl">Surplus at baseline (median = 50th %ile) · Reinvested into universal healthcare</div></div>
   </div>
 
-  <!-- ══ SLIDE 9: BREAKEVEN ══ -->
+  <!-- SLIDE 9: BREAKEVEN -->
   <div class="slide" data-ph="p2">
     <div class="pbanner bk"><div class="pbanner-icon">⚖️</div><div><div class="pt">Phase 2 · Breakeven &amp; Shift Analysis</div><h2>When Median SMMI Moves to 70th %ile</h2></div></div>
     <div class="hl bk"><p>As the system works, population health improves. The tax base shrinks — but healthcare savings grow faster, keeping the system in surplus. At 70th %ile median, the system has largely served its purpose.</p></div>
@@ -452,7 +557,7 @@ strong{color:#1a1a2e;font-weight:600;}
     <div class="tbl-label" style="margin-top:10px;">💰 Revenue &amp; Expenditure at 70th %ile Median</div>
     <table class="ttable">
       <tr><th class="th-bk">Item</th><th class="th-bk" style="width:36%;">Amount (SGD)</th></tr>
-      <tr class="row-rev"><td>Tax surcharges — all types<span class="sub-formula">839,250××1.1 + 423,750×(×1.2+×1.5 mix) × same avg per-person uplifts; tax base ~halved</span></td><td><strong>$659M</strong></td></tr>
+      <tr class="row-rev"><td>Tax surcharges — all types<span class="sub-formula">839,250×1.1 + 423,750×(×1.2+×1.5 mix) × same avg per-person uplifts; tax base ~halved</span></td><td><strong>$659M</strong></td></tr>
       <tr class="row-rev"><td>Healthcare savings<span class="sub-formula">$12B × 30% — chronic disease near-halved; double the baseline savings rate</span></td><td><strong>$3,600M</strong></td></tr>
       <tr class="row-tot"><td><strong>Total Revenue &amp; Savings</strong></td><td><strong>$4,259M</strong></td></tr>
       <tr class="row-exp"><td>Cash dividends (40% more recipients)<span class="sub-formula">142,300×$1,000 + 213,450×$500 + 355,750×$200</span></td><td><strong>$320M</strong></td></tr>
@@ -463,11 +568,11 @@ strong{color:#1a1a2e;font-weight:600;}
     </table>
     <div class="sur-box grn"><div class="sv">breakeven at 70th %ile + healthcare savings</div></div>
     <div class="card bk" style="margin-top:8px;">
-      <p>As population gains more muscle, the system approaches its purpose — a healthier Singapore. If the system reaches breakeven, it means healthcare costs are already very low.<strong>Mission accomplished.</strong></p>
+      <p>As population gains more muscle, the system approaches its purpose — a healthier Singapore. If the system reaches breakeven, it means healthcare costs are already very low. <strong>Mission accomplished.</strong></p>
     </div>
   </div>
 
-  <!-- ══ SLIDE 10: PHASE 3A ══ -->
+  <!-- SLIDE 10: PHASE 3A -->
   <div class="slide" data-ph="p3">
     <div class="pbanner p3"><div class="pbanner-icon">🤖</div><div><div class="pt">Phase 3 · Within 5 Years</div><h2>The AGI Abundance Era</h2></div></div>
     <div class="card p3">
@@ -488,12 +593,12 @@ strong{color:#1a1a2e;font-weight:600;}
     </div>
     <div class="card bk" style="margin-top:8px;">
       <h3>🎯 When the System Has Served Its Purpose</h3>
-      <p>As more Singaporeans gain muscle and the population median rises toward the 70th percentile, healthcare costs fall dramatically. If the tax-dividend system approaches breakeven, it means Singapore has achieved low chronic disease burden and a genuinely healthier population</p>
+      <p>As more Singaporeans gain muscle and the population median rises toward the 70th percentile, healthcare costs fall dramatically. If the tax-dividend system approaches breakeven, it means Singapore has achieved low chronic disease burden and a genuinely healthier population.</p>
     </div>
     <div class="quote p3"><p>"In the world of abundance, the only thing worth earning is the discipline to deserve it."</p></div>
   </div>
 
-  <!-- ══ SLIDE 11: PHASE 3B ══ -->
+  <!-- SLIDE 11: PHASE 3B -->
   <div class="slide" data-ph="p3">
     <div class="pbanner p3"><div class="pbanner-icon">⚖️</div><div><div class="pt">Phase 3 · Within 5 Years</div><h2>Health as the New Wealth</h2></div></div>
     <p style="margin-bottom:8px;">Access to limited or premium goods and experiences allocated by SMMI percentile — not account balance.</p>
@@ -508,7 +613,7 @@ strong{color:#1a1a2e;font-weight:600;}
     <p class="sci" style="margin-top:6px;">Basic tier guarantees food, shelter, healthcare &amp; education for all. Health Credits govern access to premium resources only.</p>
   </div>
 
-  <!-- ══ SLIDE 12: PHASE 3C ══ -->
+  <!-- SLIDE 12: PHASE 3C -->
   <div class="slide" data-ph="p3">
     <div class="pbanner p3"><div class="pbanner-icon">🌍</div><div><div class="pt">Phase 3 · Within 5 Years</div><h2>Global Muscle Index</h2></div></div>
     <div class="card p3">
@@ -536,7 +641,6 @@ strong{color:#1a1a2e;font-weight:600;}
 // ── PIE CHARTS IN TABLE ───────────────────────────────
 function initPies(){
   if(typeof Chart==='undefined'){setTimeout(initPies,200);return;}
-  // Current system — only exercise coloured
   new Chart(document.getElementById('pie-cur').getContext('2d'),{
     type:'pie',
     data:{labels:['Exercise (20%)','Diet (50%)','Sleep (30%)'],
@@ -545,7 +649,6 @@ function initPies(){
     options:{responsive:false,animation:{duration:0},
       plugins:{legend:{display:false},tooltip:{enabled:false}}}
   });
-  // New system — all 3 coloured
   new Chart(document.getElementById('pie-new').getContext('2d'),{
     type:'pie',
     data:{labels:['Exercise (20%)','Diet (50%)','Sleep (30%)'],
@@ -612,7 +715,6 @@ function mkFatSets(g){
     borderDash:FAT_LS[i].dash,pointRadius:2,
     pointBackgroundColor:FAT_LS[i].color,tension:0.35
   }));
-  // fat limit dashed line
   sets.push({
     label:'Fat limit',data:AL.map(()=>lim),
     borderColor:'#E24B4A',backgroundColor:'transparent',
